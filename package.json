@@ -1,0 +1,20 @@
+{
+  "name": "serverless-api",
+  "version": "1.0.0",
+  "description": "Serverless API",
+  "main": "handler.js",
+  "scripts": {
+    "dev": "sls offline start --port 4500",
+    "test": "jest"
+  },
+  "author": "Sebastian Matias Segura (@seb7887)",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "serverless-offline": "^4.10.0",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

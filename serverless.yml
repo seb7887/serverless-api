@@ -1,0 +1,15 @@
+service: aws-nodejs # NOTE: update this with your service name
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  profile: seb7887
+  region: us-east-2
+  stage: dev
+
+plugins:
+  - serverless-offline
+
+functions:
+  helloworld:
+    handler: src/helloworld.handler
