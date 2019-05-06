@@ -3,13 +3,32 @@ service: aws-nodejs # NOTE: update this with your service name
 provider:
   name: aws
   runtime: nodejs8.10
-  profile: seb7887
   region: us-east-2
-  stage: dev
 
 plugins:
   - serverless-offline
 
 functions:
-  helloworld:
-    handler: src/helloworld.handler
+  # helloworld:
+  #   handler: src/helloworld.handler
+  api:
+    handler: src/api/index.handler
+    events:
+      - http: ANY /
+      - http: "ANY {proxy+}"
+  # todos:
+  #   handler: src/api/todos.handler
+  #   events:
+  #     - http:
+  #         path: todo
+  #         method: GET
+  # todo:
+  #   handler: src/api/todo.handler
+  #   events:
+  #     - http:
+  #         path: todo/{todo}
+  #         method: GET
+  #         request:
+  #           parameters:
+  #             paths:
+  #               todo: true

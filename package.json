@@ -5,7 +5,9 @@
   "main": "handler.js",
   "scripts": {
     "dev": "sls offline start --port 4500",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "sls deploy",
+    "remove": "sls remove"
   },
   "author": "Sebastian Matias Segura (@seb7887)",
   "license": "ISC",
@@ -15,6 +17,7 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "serverless-http": "^2.0.1"
   }
 }
